@@ -1,0 +1,7 @@
+{	filename = FILENAME
+	sub(/.*\//, "", filename)
+	sub(/.*_/, "", filename)
+	a[filename] = 1}
+END { for(x in a) {
+	print x
+}}

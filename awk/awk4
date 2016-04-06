@@ -1,0 +1,9 @@
+{	filename = FILENAME
+	sub(/.*\//, "", filename)
+	sub(/_.*/, "", filename)
+	a[filename] += $(1) == "Макароны"}
+END { for(x in a) {
+	if(a[x]) {
+		print x
+	}
+}}
